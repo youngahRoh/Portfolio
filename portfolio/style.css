@@ -1,0 +1,66 @@
+/* reset */
+* {margin:0; padding:0; font-family: 'Lato';}
+li {list-style: none;}
+a {text-decoration: none;}
+
+.container { display: flex;
+    width: 1280px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;}
+.row { padding-top: 50px;}
+p.size1 {font-size: 20px;}
+
+/* nav */
+#nav {position: fixed; left: 0; top: 0; width: 100%; background-color: rgba(225, 225, 225, 0.1);}
+#nav h1 {float: left; color: #fff; font-size: 40px; padding: 5px 5px 5px 15px; font-family: 'Abel' }
+#nav ul {float: right; padding-right: 10px; }
+#nav ul li {display: inline; }
+#nav ul li a {display: inline-block; padding: 20px 15px; color: #fff; font-weight: bold; font-family: 'Abel'; text-transform: capitalize;}
+#nav ul li a:hover {color:bisque;}
+#nav ul li.active a {color: bisque;}
+#nav .mNav {display: none; position: absolute; top: 7px; right: 10px; width: 65px; height: 45px; cursor: pointer;/*background-color: rgba(255,255,255,0.3);*/}
+
+/* icon-menu */
+.icon-wrap {padding-left: 10px;}
+.icon-wrap .icon, 
+.icon-wrap .icon:before, 
+.icon-wrap .icon:after {width: 45px; height: 4px; background: #fff;}
+.icon-wrap .icon {position: relative; margin-top:20px;}
+.icon-wrap .icon:before {content:'';position: absolute; left: 0; bottom: 10px; }
+.icon-wrap .icon:after {content:''; position: absolute; left: 0; top: 10px;}
+
+/* contents */
+#contents {text-align: center; color: #fff; width: 100%;}
+#contents > div {height: 800px; width: 100%;}
+#contents > div h2 {font-size: 50px; font-weight: 100; text-transform: uppercase;}
+#contents > div h2 strong {font-weight: 700; font-style: italic;}
+
+#contents img {width: 100%;}
+#contents .left1 {margin-bottom: 50px;}
+#contents .left2 {width: 500px; float: left; }
+#contents .right1{float: left; width: 500px; margin-left: 150px;}
+
+
+/* section */
+#section1 {background:radial-gradient(ellipse farthest-corner at center top, rgb(53, 50, 50) 0%, rgb(53, 50, 50) 100%); }
+#section2 {background:radial-gradient(ellipse farthest-corner at center top, #000, #000);}
+#section3 {background:radial-gradient(ellipse farthest-corner at center top, #000, #000);}
+#section4 {background:radial-gradient(ellipse farthest-corner at center bottom, #000, #000);}
+#section5 {background:radial-gradient(ellipse farthest-corner at center bottom, #000 0%, #000 100%);}
+#section6 {background:radial-gradient(ellipse farthest-corner at center top, #000 0%, #000 100%);}
+
+/* mediaquery */
+@media (max-width:800px){
+    #nav .menu {display: none;}
+    #nav .mNav {display: block;}
+    
+    #nav h1 {width: 100%;} /* 아무것도 못들어게 li가 밑으로 내려가게 */
+    #nav .menu {float: none; text-align: center; padding-right: 0;}
+    #nav .menu li {width: 100%; display: inline-block;}
+    #nav .menu li.active {background-color: rgba(255,255,255,0.3);}
+    
+    #contents > div h2 {font-size: 6vw; font-weight: 300;} /*모바일용 폰트 사이즈*/
+    #contents .left2 {width: 500px; float: none; }
+
+}
